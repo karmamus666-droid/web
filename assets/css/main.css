@@ -90,13 +90,14 @@ h6 {
 /* PHP Email Form Messages
 ------------------------------*/
 .php-email-form .error-message {
-  display: none;
-  background: #df1529;
-  color: #ffffff;
-  text-align: left;
-  padding: 15px;
-  margin-bottom: 24px;
-  font-weight: 600;
+  display: none !important;
+  visibility: hidden !important; /* 隱藏元素 */
+  opacity: 0 !important;          /* 變成完全透明 */
+  height: 0 !important;           /* 高度歸零 */
+  padding: 0 !important;          /* 內邊距歸零（消滅紅色大區塊） */
+  margin: 0 !important;           /* 外邊距歸零 */
+  border: none !important;        /* 拔掉任何邊框 */
+  font-size: 0 !important;        /* 字體縮小到不見 */
 }
 
 .php-email-form .sent-message {
@@ -884,7 +885,7 @@ section,
 }
 
 .testimonials .testimonial-item .testimonial-img {
-  width: 120px;
+  width: 200px;
   border-radius: 50%;
   border: 4px solid var(--background-color);
   margin: 0 auto;
@@ -1027,12 +1028,12 @@ section,
 --------------------------------------------------------------*/
 .services .service-item {
   background-color: var(--surface-color);
-  box-shadow: 0px 5px 90px 0px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 5px 90px 0px rgba(0, 0, 0, 0.08);
   height: 100%;
   padding: 60px 30px;
   text-align: center;
   transition: 0.3s;
-  border-radius: 5px;
+  border-radius: 30px;
 }
 
 .services .service-item .icon {
@@ -1413,6 +1414,10 @@ section,
 
 .contact .php-email-form button[type=submit]:hover {
   background: color-mix(in srgb, var(--accent-color), transparent 25%);
+}
+
+.blue-link {
+    color: #007BFF; /* 這是一種比較好看的現代優雅藍（傳送門藍） */
 }
 
 /*--------------------------------------------------------------
